@@ -16,20 +16,15 @@
 
 @synthesize myWebView;
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
 
-
-     NSString *html = [NSString stringWithFormat:@"<html><body><iframe class=\"youtube-player\" type=\"text/html\" width=\"%f\" height=\"%d\" src=\"http://www.youtube.com/embed/Ur4OEBZOAXs?HD=1;rel=0;showinfo=1\" allowfullscreen frameborder=\"0\" rel=nofollow></iframe></body></html>", [[UIScreen mainScreen] bounds].size.width-30, 150];
-     [myWebView loadHTMLString:html baseURL:nil];
-
+    NSString *html = [NSString stringWithFormat:@"<html><body><iframe class=\"youtube-player\" type=\"text/html\" width=\"%f\" height=\"%d\" src=\"http://www.youtube.com/embed/Ur4OEBZOAXs?HD=1;rel=0;showinfo=1\" allowfullscreen frameborder=\"0\" rel=nofollow></iframe></body></html>", [[UIScreen mainScreen] bounds].size.width-30, 150];
+    [myWebView loadHTMLString:html baseURL:nil];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
-
 }
 
 
